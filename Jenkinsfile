@@ -8,5 +8,10 @@ steps {
  sh ''' sleep 5 '''
  }
  }
+ stage ( 'test100' ) {
+  steps {
+   echo "hi"
+  }
+ }
 }
 }
