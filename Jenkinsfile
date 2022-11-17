@@ -11,6 +11,7 @@ steps {
  stage ( 'test100' ) {
   steps {
    echo "hi"
+   sh ''' sleep 5 '''
   }
  }
 }
