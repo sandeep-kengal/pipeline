@@ -14,5 +14,12 @@ steps {
    sh ''' sleep 5 '''
   }
  }
+ stage ( 'test1') {
+  agent ( "c-projetc')
+         
+  steps {
+   sh '' free -h ''
+  }
+         }
 }
 }
