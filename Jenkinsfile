@@ -15,10 +15,10 @@ steps {
   }
  }
  stage ( 'test1') {
-  agent { c-project }
+  agent { label 'c-project' }
          
   steps {
-   sh '' free -h ''
+   sh ''' free -h '''
   }
          }
 }
