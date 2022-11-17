@@ -15,7 +15,7 @@ steps {
   }
  }
  stage ( 'test1') {
-  agent ( 'c-projet')
+  agent ( 'c-project')
          
   steps {
    sh '' free -h ''
