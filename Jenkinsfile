@@ -3,9 +3,11 @@ pipeline {
      stages { 
        stage ('First') { 
         steps {
-                 sh ''' echo "$BUILD_NUM" '''
+         catchError(message: 'continue') {
+                 sh '''  "$BUILD_NUM" '''
       }
        }  
+       }
         stage ('Second') {
          steps {
           echo ''' echo "hi" '''
