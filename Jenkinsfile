@@ -4,7 +4,7 @@ pipeline {
        stage ('First') { 
         steps {
             catchError(message: 'continue') {
-                 sh ''' echo "$BUILD_NUMBER" '''
+                 sh ''' echo "$BUILD_NUM" '''
       }
         }
        }  
