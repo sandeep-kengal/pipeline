@@ -1,25 +1,17 @@
-pipeline 
-{
-agent any
-stages {
-stage ( 'job1' ) {
-steps {
- echo "This is Build stage"
- sh ''' sleep 5 '''
- }
- }
- stage ( 'test' ) {
-  steps {
-   echo "hi"
-   sh ''' sleep 5 '''
-  }
- }
- stage ( 'test1') {
-  agent { label 'c-project' }
-         
-  steps {
-   sh ''' free -h '''
-  }
-         }
-}
-}
+pipeline {
+ agent any
+     stages { 
+       stage ('First') { 
+        steps {
+            catchError(message: 'continue') {
+                 sh ''' echo "$BUILD_NUMBER" '''
+      }
+        }
+       }  
+        stage ('Second') {
+         steps {
+          echo ''' echo "hi"
+          }
+        } 
+   }
+   }
