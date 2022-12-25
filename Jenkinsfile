@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'nginx --version'
+                sh ''' docker run --rm -p 8000:8000 nginx '''
             }
         }
     }
